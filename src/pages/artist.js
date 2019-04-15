@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import fetch from 'node-fetch'
+import Head from 'next/head'
+import './stylesheets/artist.scss'
 
 import { loadAlbums } from '../actions/albums'
 import { loadArtist } from '../actions/artist'
 import { loadFeatured } from '../actions/featured'
+import Header from '../components/Header'
 
 class Artist extends Component {
   static async getInitialProps ({ reduxStore, req, query }) {
@@ -25,9 +28,22 @@ class Artist extends Component {
   }
 
   render () {
-    return <div />
+    return (
+      <React.Fragment>
+        <Head>
+          <title>{this.props.artist.info.artistName} - Serasa iTunes</title>
+        </Head>
+        <div className="container">
+          <Header images={this.props.artist.images} />
+        </div>
+      </React.Fragment>
+    )
   }
 }
 
-export default connect()(Artist)
+const mapStateToProps = state => ({
+  artist: state.artist
+})
+
+export default connect(mapStateToProps)(Artist)
 

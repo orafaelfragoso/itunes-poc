@@ -14,6 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
+    "image-palette-core": "^0.2.2",
     "next": "^8.0.4",
     "next-routes": "^1.4.2",
     "node-fetch": "^2.3.0",
@@ -21,6 +22,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.2",
+    "react-responsive": "^6.1.1",
     "redux": "^4.0.1",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0"
