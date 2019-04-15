@@ -1,20 +1,15 @@
 const { createServer } = require('http')
-const { parse } = require('url')
 const next = require('next')
+const routes = require('./routes')
 
-const dev = process.env.NODE_ENV !== 'production'
-const app = next({ dev, dir: './src'})
-const handle = app.getRequestHandler()
 const port = process.env.PORT || 3000
+const dev = process.env.NODE_ENV !== 'production'
+const app = next({ dev, dir: './src' })
+const handler = routes.getRequestHandler(app)
 
 app.prepare().then(() => {
-  createServer((req, res) => {
-    const parsedUrl = parse(req.url, true)
-    const { pathname, query } = parsedUrl
-
-    handle(req, res, parsedUrl)
-  }).listen(port, err => {
+  createServer(handler).listen(port, err => {
     if (err) throw err
-    console.log('> Ready on http://localhost:' + port)
+    console.log(`> Ready on http://localhost:${port}`)
   })
 })

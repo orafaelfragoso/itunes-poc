@@ -10,10 +10,9 @@ class CustomDocument extends Document {
     return (
       <Html>
         <Head>
-          <title>Serasa iTunes Store</title>
-          <style>{`body { margin: 0 } /* custom! */`}</style>
+          <style>{`html, body { margin: 0; padding: 0; }`}</style>
         </Head>
-        <body className="custom_class">
+        <body>
           <Main />
           <NextScript />
         </body>
