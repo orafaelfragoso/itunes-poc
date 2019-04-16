@@ -15,7 +15,7 @@ class Artist extends Component {
   static async getInitialProps ({ reduxStore, req, query }) {
     const isServer = !!req
     const term = query.slug
-    const info = await fetch('http://localhost:3001/search/' + term).then(res => res.json())
+    const info = await fetch('https://itunes-crawler.herokuapp.com/search/' + term).then(res => res.json())
 
     reduxStore.dispatch(loadAlbums(isServer, info.albums))
     reduxStore.dispatch(loadFeatured(isServer, info.similar))
