@@ -8,6 +8,8 @@ import { loadAlbums } from '../actions/albums'
 import { loadArtist } from '../actions/artist'
 import { loadFeatured } from '../actions/featured'
 import Header from '../components/Header'
+import AlbumList from '../containers/AlbumList'
+import FeaturedList from '../containers/FeaturedList'
 
 class Artist extends Component {
   static async getInitialProps ({ reduxStore, req, query }) {
@@ -41,6 +43,8 @@ class Artist extends Component {
             info={this.props.artist.more}
             link={this.props.artist.info.artistLinkUrl}
           />
+          <AlbumList />
+          <FeaturedList />
         </div>
       </React.Fragment>
     )
