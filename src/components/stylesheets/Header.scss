@@ -2,4 +2,40 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .info-container {
+    max-width: 1200px;
+    padding: 0 40px;
+    box-sizing: border-box;
+
+    .header-title {
+      padding-top: 30px;
+      padding-bottom: 20px;
+    }
+
+    .apple-music-btn {
+      display: none;
+    }
+    
+    .header-list {
+      box-sizing: border-box;
+      padding-top: 105px;
+      padding-left: 30px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .info-container {
+      .apple-music-btn {
+        display: inline-block;
+        margin: 35px 0;
+      }
+
+      .header-list {
+        padding: 0;
+      }
+    }
+  }
 }

@@ -1,0 +1,27 @@
+.header-list {
+  list-style: none;
+  width: 100%;
+
+  li {
+    border-top: 1px solid #e5e5e5;
+    padding: 15px 0;
+
+    .header-list__title,
+    .header-list__description {
+      display: block;
+    }
+
+    .header-list__title {
+      text-transform: uppercase;
+      color: #959597;
+      font-size: 15px;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+
+    .header-list__description {
+      font-size: 15px;
+      color: #111;
+    }
+  }
+}

@@ -34,7 +34,13 @@ class Artist extends Component {
           <title>{this.props.artist.info.artistName} - Serasa iTunes</title>
         </Head>
         <div className="container">
-          <Header images={this.props.artist.images} />
+          <Header 
+            title={this.props.artist.info.artistName}
+            description={this.props.artist.description}
+            images={this.props.artist.images} 
+            info={this.props.artist.more}
+            link={this.props.artist.info.artistLinkUrl}
+          />
         </div>
       </React.Fragment>
     )

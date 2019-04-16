@@ -10,8 +10,9 @@ class CustomDocument extends Document {
     return (
       <Html>
         <Head>
-          <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" />
-          <style>{`html,body {margin: 0; padding: 0; font-family: 'Lato', sans-serif;}`}</style>
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.css" rel="stylesheet" />
+          <link href="https://cdn.jsdelivr.net/gh/mailtoharshit/San-Francisco-Font-/sanfrancisco.css" rel="stylesheet" />
+          <style>{`* {margin: 0; padding: 0;}`}</style>
         </Head>
         <body>
           <Main />
