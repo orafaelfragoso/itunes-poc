@@ -18,7 +18,7 @@ export const pauseTrack = () => dispatch => {
 
 export const setTrack = (track) => dispatch => {
   return dispatch({
-    type: actionTypes.PAUSE,
+    type: actionTypes.SET_TRACK,
     payload: track
   })
 }

@@ -1,0 +1,124 @@
+.album-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+
+  .audio-player {
+    display: none;
+  }
+
+  .album-wrapper {
+    margin-bottom: 70px;
+    display: flex;
+  }
+
+  .album-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .album-container-list {
+    padding-left: 30px;
+
+    .album-title {
+      padding: 10px 0 30px 0;
+    }
+  }
+
+  .album-track-count {
+    width: 100%;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 10px 0;
+    color: #959597;
+    display: block;
+    font-weight: 400;
+  }
+
+  ul.album-songs {
+    list-style: none;
+    width: 100%;
+    margin-top: 30px;
+
+    li {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0 5px;
+      border-radius: 4px;
+
+      img {
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+        border-radius: 4px;
+      }
+
+      &:first-child {
+        .album-songs__info {
+          border-top: 1px solid #e5e5e5;
+        }
+      }
+
+      &:hover {
+        background-color: #f8f8f8;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .album-songs__info {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid #e5e5e5;
+        padding: 10px 0;
+        margin-left: 5px;
+        align-items: center;
+        font-size: 13px;
+
+        .album-songs__wrapper {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+
+          .album-songs__trackName {
+            color: #191919;
+            font-weight: 400;
+          }
+
+          .album-songs__trackArtist {
+            color: #888;
+            font-weight: 400;
+          }
+        }
+
+        .album-songs__price {
+          color: #888;
+          font-weight: 400;
+        }
+      }
+    }
+
+    li.isPlaying {
+      .album-songs__price,
+      .album-songs__trackArtist,
+      .album-songs__trackName {
+        color: #BD3E60 !important;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .album-container-list {
+      padding: 0 5px;
+    }
+
+    .album-wrapper {
+      flex-direction: column;
+
+      > div {
+        padding: 0;
+      }
+    }
+  }
+}

@@ -4,7 +4,7 @@ const INITIAL_STATE = {
   paused: true,
   duration: 0,
   currentTrack: '',
-  currentTrackID: 1
+  currentTrackID: null
 }
 
 export default function player(state = INITIAL_STATE, action) {
